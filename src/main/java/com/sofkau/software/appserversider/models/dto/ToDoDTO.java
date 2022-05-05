@@ -13,6 +13,8 @@ public class ToDoDTO implements Serializable{
 
     private List<Chores> choresList = new ArrayList<>();
 
+    private String name;
+
     private String title;
 
     private String description;
