@@ -14,8 +14,7 @@ import java.util.List;
 @RequestMapping("api/")
 public class Controller {
 
-    //Why do I have to use the @Qualifier here
-    @Qualifier("categoryServiceDAO")
+    @Qualifier("categoryServImpDAO")
     @Autowired
     private CategoryServiceDAO service;
 
@@ -27,6 +26,11 @@ public class Controller {
     @PostMapping("save/category")
     public Category createCategory(@RequestBody Category category){
         return service.createCategory(category);
+    }
+
+    @PutMapping("update/chore")
+    public Category updateChore(@RequestBody Chores chore){
+        return service.updateChores(chore);
     }
 
     @PostMapping("create/chore")

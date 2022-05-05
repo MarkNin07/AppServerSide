@@ -36,8 +36,10 @@ public class CategoryServImpDAO implements CategoryServiceDAO {
     }
 
     @Override
-    public Chores updateChores(Chores chore) {
-        return choresRepo.save(chore);
+    public Category updateChores(Chores chore) {
+        Category category = categoryRepo.findById(chore.getFkCategoryId()).get();
+        choresRepo.save(chore);
+        return categoryRepo.save(category);
     }
 
     @Override

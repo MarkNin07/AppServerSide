@@ -13,7 +13,7 @@ public interface CategoryServiceDAO {
 
     Category createChores(Chores chore);
 
-    Chores updateChores(Chores chore);
+    Category updateChores(Chores chore);
 
     void deleteCategory(Category category);
 
