@@ -17,5 +17,7 @@ public class Chores {
 
     private boolean done;
 
+    private Long fkChoresId;
+
 
 }
