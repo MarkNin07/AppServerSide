@@ -19,7 +19,7 @@ public class ToDoDTO implements Serializable{
 
     private boolean done;
 
-    private Long fkChoresId;
+    private Long fkCategoryId;
 
     public Long getId() {
         return id;
@@ -61,12 +61,12 @@ public class ToDoDTO implements Serializable{
         this.done = done;
     }
 
-    public Long getFkChoresId() {
-        return fkChoresId;
+    public Long getFkCategoryId() {
+        return fkCategoryId;
     }
 
-    public void setFkChoresId(Long fkChoresId) {
-        this.fkChoresId = fkChoresId;
+    public void setFkCategoryId(Long fkChoresId) {
+        this.fkCategoryId = fkChoresId;
     }
 
 }

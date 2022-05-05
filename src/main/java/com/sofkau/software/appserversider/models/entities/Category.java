@@ -1,5 +1,6 @@
 package com.sofkau.software.appserversider.models.entities;
 
+import lombok.Data;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 
 @Entity(name="Category")
 @Table(name="CATEGORY")
+@Data
 public class Category {
 
     @Id
@@ -18,6 +20,11 @@ public class Category {
             fetch = FetchType.EAGER
     )
     private List<Chores> choresList = new ArrayList<>();
+
+    public Category addChore(Chores chore) {
+        this.choresList.add(chore);
+        return this;
+    }
 
 
 }

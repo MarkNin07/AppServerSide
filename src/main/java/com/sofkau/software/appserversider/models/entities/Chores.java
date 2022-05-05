@@ -1,10 +1,13 @@
 package com.sofkau.software.appserversider.models.entities;
 
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity(name="Chores")
 @Table(name="CHORES")
+@Data
 public class Chores {
 
     @Id
@@ -17,7 +20,7 @@ public class Chores {
 
     private boolean done;
 
-    private Long fkChoresId;
+    private Long fkCategoryId;
 
 
 }
