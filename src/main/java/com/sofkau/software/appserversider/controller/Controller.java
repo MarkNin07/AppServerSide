@@ -3,7 +3,7 @@ package com.sofkau.software.appserversider.controller;
 
 import com.sofkau.software.appserversider.models.entities.Category;
 import com.sofkau.software.appserversider.models.entities.Chores;
-import com.sofkau.software.appserversider.service.CategoryServiceDAO;
+import com.sofkau.software.appserversider.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
@@ -14,9 +14,9 @@ import java.util.List;
 @RequestMapping("api/")
 public class Controller {
 
-    @Qualifier("categoryServImpDAO")
+    @Qualifier("categoryServImp")
     @Autowired
-    private CategoryServiceDAO service;
+    private CategoryService service;
 
     @GetMapping("get/categories")
     public List<Category> getAllCategories(){

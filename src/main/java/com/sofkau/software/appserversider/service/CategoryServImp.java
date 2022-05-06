@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CategoryServImpDAO implements CategoryServiceDAO {
+public class CategoryServImp implements CategoryService {
 
     @Autowired
     private CategoryRepository categoryRepo;

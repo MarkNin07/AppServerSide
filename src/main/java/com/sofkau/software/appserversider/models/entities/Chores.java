@@ -16,8 +16,6 @@ public class Chores {
 
     private String title;
 
-    private String description;
-
     private boolean done;
 
     private Long fkCategoryId;
