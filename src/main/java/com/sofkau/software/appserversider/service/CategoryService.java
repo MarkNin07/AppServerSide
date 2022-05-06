@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//The logic for creating a service component class file is shown here (CRUD)
 @Service
 public interface CategoryService {
 

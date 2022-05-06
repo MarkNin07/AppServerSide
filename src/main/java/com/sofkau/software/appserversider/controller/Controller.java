@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//RestController will handle responses to HTTP requests. RestController = Controller + ResponseBody
 @RestController
+//This Controller adds response body to each method that exposes a RequestMapping
 @RequestMapping("api/")
 public class Controller {
 
@@ -23,6 +25,8 @@ public class Controller {
         return service.findAllCategories();
     }
 
+    //RequestBody allows Spring to automatically deserialize the HTTP request body into a Java Object
+    //which can be bound to the method and further processed
     @PostMapping("save/category")
     public Category createCategory(@RequestBody Category category){
         return service.createCategory(category);

@@ -9,16 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+//@Service annotation is used to write business logic in a different layer.
+//We're implementing all the methods from our interface (CRUD)
 @Service
 public class CategoryServImp implements CategoryService {
+
 
     @Autowired
     private CategoryRepository categoryRepo;
 
     @Autowired
     private ChoresRepository choresRepo;
-
 
 
 
