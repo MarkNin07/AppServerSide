@@ -45,11 +45,11 @@ public class CategoryServImp implements CategoryService {
 
     @Override
     public void deleteCategory(Category category) {
-        Category categoryToDelete = categoryRepo.findById(category.getId()).get();
+        Category categoryToDelete = categoryRepo.findById(category.getCategoryId()).get();
         if(categoryToDelete.getChoresList().size() >= 0){
             categoryToDelete.getChoresList().forEach(chore -> choresRepo.deleteById(chore.getId()));
         }
-        categoryRepo.deleteById(category.getId());
+        categoryRepo.deleteById(category.getCategoryId());
 
     }
 

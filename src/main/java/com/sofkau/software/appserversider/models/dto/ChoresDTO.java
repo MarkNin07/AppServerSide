@@ -1,22 +1,8 @@
-/*
 package com.sofkau.software.appserversider.models.dto;
 
-import com.sofkau.software.appserversider.models.entities.Chores;
-
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
-public class ToDoDTO implements Serializable{
-
+public class ChoresDTO {
 
     private Long id;
-
-    private Long categoryId;
-
-    private List<Chores> choresList = new ArrayList<>();
-
-    private String categoryName;
 
     private String title;
 
@@ -30,14 +16,6 @@ public class ToDoDTO implements Serializable{
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public List<Chores> getChoresList() {
-        return choresList;
-    }
-
-    public void setChoresList(List<Chores> choresList) {
-        this.choresList = choresList;
     }
 
     public String getTitle() {
@@ -60,9 +38,7 @@ public class ToDoDTO implements Serializable{
         return fkCategoryId;
     }
 
-    public void setFkCategoryId(Long fkChoresId) {
-        this.fkCategoryId = fkChoresId;
+    public void setFkCategoryId(Long fkCategoryId) {
+        this.fkCategoryId = fkCategoryId;
     }
-
 }
-*/

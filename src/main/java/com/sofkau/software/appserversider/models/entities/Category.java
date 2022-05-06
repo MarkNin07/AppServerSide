@@ -1,6 +1,5 @@
 package com.sofkau.software.appserversider.models.entities;
 
-import lombok.Data;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +10,7 @@ import java.util.List;
 
 @Entity(name="Category")
 @Table(name="CATEGORY")
-@Data
+
 public class Category {
 
     //Id tells the ORM that this field (id) will be used to uniquely identify a single entry in our "CATEGORY" relation
@@ -19,9 +18,9 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long categoryId;
 
-    private String name;
+    private String categoryName;
 
     @OneToMany(
             cascade = CascadeType.ALL,
@@ -34,5 +33,27 @@ public class Category {
         return this;
     }
 
+    public Long getCategoryId() {
+        return categoryId;
+    }
 
+    public void setCategoryId(Long id) {
+        this.categoryId = id;
+    }
+
+    public String getName() {
+        return categoryName;
+    }
+
+    public void setName(String name) {
+        this.categoryName = name;
+    }
+
+    public List<Chores> getChoresList() {
+        return choresList;
+    }
+
+    public void setChoresList(List<Chores> choresList) {
+        this.choresList = choresList;
+    }
 }
