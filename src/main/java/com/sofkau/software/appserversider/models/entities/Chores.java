@@ -8,7 +8,7 @@ import javax.persistence.*;
 //@Table tells the ORM what table name in the underlying database that this model corresponds to.
 
 @Entity(name="Chores")
-@Table(name="CHORES")
+@Table(name="chores")
 
 public class Chores {
 

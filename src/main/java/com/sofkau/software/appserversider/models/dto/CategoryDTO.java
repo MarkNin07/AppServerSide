@@ -7,18 +7,18 @@ import java.util.List;
 
 public class CategoryDTO {
 
-    private Long categoryId;
+    private Long id;
 
     private String categoryName;
 
     private List<Chores> choresList = new ArrayList<>();
 
-    public Long getCategoryId() {
-        return categoryId;
+    public Long getId() {
+        return id;
     }
 
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCategoryName() {

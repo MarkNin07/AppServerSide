@@ -9,7 +9,7 @@ import java.util.List;
 //@Table tells the ORM what table name in the underlying database that this model corresponds to.
 
 @Entity(name="Category")
-@Table(name="CATEGORY")
+@Table(name="category")
 
 public class Category {
 
@@ -18,7 +18,7 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long categoryId;
+    private Long id;
 
     private String categoryName;
 
@@ -33,20 +33,20 @@ public class Category {
         return this;
     }
 
-    public Long getCategoryId() {
-        return categoryId;
+    public Long getId() {
+        return id;
     }
 
-    public void setCategoryId(Long id) {
-        this.categoryId = id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getName() {
+    public String getCategoryName() {
         return categoryName;
     }
 
-    public void setName(String name) {
-        this.categoryName = name;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public List<Chores> getChoresList() {

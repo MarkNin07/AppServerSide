@@ -12,13 +12,7 @@ import java.util.List;
 
 @Mapper(componentModel = "spring", uses={ChoresMapper.class})
 public interface CategoryMapper {
-/*
-    @Mappings({
-            @Mapping(source="categoryId", target= "categoryId"),
-            @Mapping(source="categoryName", target="categoryName"),
-            @Mapping(source="choresList", target ="choresList")
-    })
-*/
+
         //Turn entities into ToDoDTO
     CategoryDTO convertToToDoDTO(Category category);
     //Turn an Entities List into ToDoDTO List

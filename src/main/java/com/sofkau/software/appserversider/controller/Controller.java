@@ -14,30 +14,31 @@ import java.util.List;
 @RestController
 //This Controller adds response body to each method that exposes a RequestMapping
 @RequestMapping("api/")
+@CrossOrigin(origins = "http://localhost:3000/")
 public class Controller {
 
     @Qualifier("categoryServImp")
     @Autowired
     private CategoryService service;
 
-    @GetMapping("get/categories")
+    @GetMapping
     public List<Category> getAllCategories(){
         return service.findAllCategories();
     }
 
     //RequestBody allows Spring to automatically deserialize the HTTP request body into a Java Object
     //which can be bound to the method and further processed
-    @PostMapping("save/category")
+    @PostMapping
     public Category createCategory(@RequestBody Category category){
         return service.createCategory(category);
     }
 
-    @PutMapping("update/chore")
+    @PutMapping
     public Category updateChore(@RequestBody Chores chore){
         return service.updateChores(chore);
     }
 
-    @PostMapping("create/chore")
+    @PostMapping
     public Category createChore(@RequestBody Chores chore){
         return service.createChores(chore);
     }
