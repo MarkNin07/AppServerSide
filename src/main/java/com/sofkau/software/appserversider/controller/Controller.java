@@ -21,24 +21,24 @@ public class Controller {
     @Autowired
     private CategoryService service;
 
-    @GetMapping
+    @GetMapping("get/categories")
     public List<Category> getAllCategories(){
         return service.findAllCategories();
     }
 
     //RequestBody allows Spring to automatically deserialize the HTTP request body into a Java Object
     //which can be bound to the method and further processed
-    @PostMapping
+    @PostMapping("create/category")
     public Category createCategory(@RequestBody Category category){
         return service.createCategory(category);
     }
 
-    @PutMapping
+    @PutMapping("update/chores")
     public Category updateChore(@RequestBody Chores chore){
         return service.updateChores(chore);
     }
 
-    @PostMapping
+    @PostMapping("create/chores")
     public Category createChore(@RequestBody Chores chore){
         return service.createChores(chore);
     }
@@ -48,7 +48,7 @@ public class Controller {
         service.deleteCategory(category);
     }
 
-    @DeleteMapping("delete/chore")
+    @DeleteMapping("delete/chores")
     public void deleteChore(@RequestBody Chores chore){
         service.deleteChores(chore);
     }
