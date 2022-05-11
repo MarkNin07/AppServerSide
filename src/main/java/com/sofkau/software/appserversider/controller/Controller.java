@@ -43,14 +43,14 @@ public class Controller {
         return service.createChores(chore);
     }
 
-    @DeleteMapping("delete/category")
-    public void deleteCategory(@RequestBody Category category){
-        service.deleteCategory(category);
+    @DeleteMapping("delete/category/{id}")
+    public void deleteCategory(@PathVariable("id") Long id ){
+        service.deleteCategory(id);
     }
 
-    @DeleteMapping("delete/chores")
-    public void deleteChore(@RequestBody Chores chore){
-        service.deleteChores(chore);
+    @DeleteMapping("delete/chores/{id}")
+    public void deleteChore(@PathVariable("id") Long id){
+        service.deleteChores(id);
     }
 
 }

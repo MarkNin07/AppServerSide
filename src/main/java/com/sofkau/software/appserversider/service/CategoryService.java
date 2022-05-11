@@ -16,9 +16,9 @@ public interface CategoryService {
 
     Category updateChores(Chores chore);
 
-    void deleteCategory(Category category);
+    void deleteCategory(Long id);
 
-    void deleteChores(Chores chores);
+    void deleteChores(Long id);
 
     List<Category> findAllCategories();
 
