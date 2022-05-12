@@ -1,5 +1,7 @@
 package com.sofkau.software.appserversider.service;
 
+import com.sofkau.software.appserversider.models.dto.CategoryDTO;
+import com.sofkau.software.appserversider.models.dto.ChoresDTO;
 import com.sofkau.software.appserversider.models.entities.Category;
 import com.sofkau.software.appserversider.models.entities.Chores;
 import org.springframework.stereotype.Service;
@@ -10,16 +12,16 @@ import java.util.List;
 @Service
 public interface CategoryService {
 
-    Category createCategory(Category category);
+    CategoryDTO createCategory(CategoryDTO categoryDTO);
 
-    Category createChores(Chores chore);
+    CategoryDTO createChores(ChoresDTO choresDTO);
 
-    Category updateChores(Chores chore);
+    CategoryDTO updateChores(ChoresDTO choresDTO);
 
     void deleteCategory(Long id);
 
     void deleteChores(Long id);
 
-    List<Category> findAllCategories();
+    List<CategoryDTO> findAllCategories();
 
 }

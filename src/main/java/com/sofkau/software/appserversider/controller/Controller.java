@@ -1,6 +1,8 @@
 package com.sofkau.software.appserversider.controller;
 
 
+import com.sofkau.software.appserversider.models.dto.CategoryDTO;
+import com.sofkau.software.appserversider.models.dto.ChoresDTO;
 import com.sofkau.software.appserversider.models.entities.Category;
 import com.sofkau.software.appserversider.models.entities.Chores;
 import com.sofkau.software.appserversider.service.CategoryService;
@@ -22,25 +24,25 @@ public class Controller {
     private CategoryService service;
 
     @GetMapping("get/categories")
-    public List<Category> getAllCategories(){
+    public List<CategoryDTO> getAllCategories(){
         return service.findAllCategories();
     }
 
     //RequestBody allows Spring to automatically deserialize the HTTP request body into a Java Object
     //which can be bound to the method and further processed
     @PostMapping("create/category")
-    public Category createCategory(@RequestBody Category category){
-        return service.createCategory(category);
+    public CategoryDTO createCategory(@RequestBody CategoryDTO categoryDTO){
+        return service.createCategory(categoryDTO);
     }
 
     @PutMapping("update/chores")
-    public Category updateChore(@RequestBody Chores chore){
-        return service.updateChores(chore);
+    public CategoryDTO updateChore(@RequestBody ChoresDTO choresDTO){
+        return service.updateChores(choresDTO);
     }
 
     @PostMapping("create/chores")
-    public Category createChore(@RequestBody Chores chore){
-        return service.createChores(chore);
+    public CategoryDTO createChore(@RequestBody ChoresDTO choresDTO){
+        return service.createChores(choresDTO);
     }
 
     @DeleteMapping("delete/category/{id}")
