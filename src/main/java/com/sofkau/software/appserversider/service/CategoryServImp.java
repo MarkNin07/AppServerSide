@@ -43,10 +43,11 @@ public class CategoryServImp implements CategoryService {
     @Override
     public CategoryDTO createChores(ChoresDTO choresDTO) {
         Chores chores = choresMapper.convertToEntities(choresDTO);
-        Chores createEntityChores = choresRepo.save(chores);
+        choresRepo.save(chores);
         Long fkCategoryId = choresDTO.getFkCategoryId();
-        System.out.println(fkCategoryId);
         Category category = categoryRepo.findById(fkCategoryId).get();
+        category.addChore(chores);
+        categoryRepo.save(category);
         return categoryMapper.convertToToDoDTO(category);
     }
 
